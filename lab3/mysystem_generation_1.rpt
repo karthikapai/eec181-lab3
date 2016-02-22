@@ -1,0 +1,163 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/ --output-directory=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/ --report-file=bsf:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.qsys
+Progress: Loading EEC181Lab2/mysystem.qsys
+Progress: Reading input file
+Progress: Adding sys_clock [altera_up_avalon_sys_sdram_pll 13.1]
+Progress: Parameterizing module sys_clock
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding hex5_hex0 [altera_avalon_pio 13.1]
+Progress: Parameterizing module hex5_hex0
+Progress: Adding pushbuttons [altera_avalon_pio 13.1]
+Progress: Parameterizing module pushbuttons
+Progress: Adding reg32_avalon_interface_0 [reg32_avalon_interface 1.0]
+Progress: Parameterizing module reg32_avalon_interface_0
+Progress: Adding hps_0 [altera_hps 13.1]
+Progress: Parameterizing module hps_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: mysystem.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/ --output-directory=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.html --report-file=sopcinfo:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.sopcinfo --report-file=cmp:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.cmp --report-file=qip:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/mysystem.qip --report-file=svd --report-file=regmap:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/mysystem.regmap --report-file=debuginfo:C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/mysystem.debuginfo --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem.qsys --language=VERILOG
+Progress: Loading EEC181Lab2/mysystem.qsys
+Progress: Reading input file
+Progress: Adding sys_clock [altera_up_avalon_sys_sdram_pll 13.1]
+Progress: Parameterizing module sys_clock
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 13.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding hex5_hex0 [altera_avalon_pio 13.1]
+Progress: Parameterizing module hex5_hex0
+Progress: Adding pushbuttons [altera_avalon_pio 13.1]
+Progress: Parameterizing module pushbuttons
+Progress: Adding reg32_avalon_interface_0 [reg32_avalon_interface 1.0]
+Progress: Parameterizing module reg32_avalon_interface_0
+Progress: Adding hps_0 [altera_hps 13.1]
+Progress: Parameterizing module hps_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: mysystem.hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: mysystem: Generating mysystem "mysystem" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 7 modules, 24 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 6 modules, 16 connections
+Info: merlin_translator_transform: After transform: 10 modules, 31 connections
+Info: merlin_domain_transform: After transform: 24 modules, 110 connections
+Info: merlin_router_transform: After transform: 30 modules, 131 connections
+Info: merlin_traffic_limiter_transform: After transform: 32 modules, 139 connections
+Info: merlin_burst_transform: After transform: 36 modules, 154 connections
+Info: merlin_network_to_switch_transform: After transform: 47 modules, 185 connections
+Info: limiter_update_transform: After transform: 47 modules, 187 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 51 modules, 236 connections
+Info: merlin_hierarchy_transform: After transform: 8 modules, 30 connections
+Info: merlin_initial_interconnect_transform: After transform: 3 modules, 5 connections
+Info: merlin_translator_transform: After transform: 4 modules, 9 connections
+Info: merlin_domain_transform: After transform: 9 modules, 38 connections
+Info: merlin_router_transform: After transform: 12 modules, 48 connections
+Info: merlin_burst_transform: After transform: 13 modules, 52 connections
+Info: merlin_network_to_switch_transform: After transform: 18 modules, 63 connections
+Info: merlin_width_transform: After transform: 20 modules, 71 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 23 modules, 92 connections
+Info: merlin_hierarchy_transform: After transform: 9 modules, 35 connections
+Info: merlin_mm_transform: After transform: 9 modules, 35 connections
+Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: merlin_interrupt_mapper_transform: After transform: 11 modules, 37 connections
+Info: reset_adaptation_transform: After transform: 15 modules, 44 connections
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 1 connections
+Info: No custom instruction connections, skipping transform 
+Info: sys_clock: "mysystem" instantiated altera_up_avalon_sys_sdram_pll "sys_clock"
+Info: onchip_memory2_0: Starting RTL generation for module 'mysystem_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=mysystem_onchip_memory2_0 --dir=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0062_onchip_memory2_0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0062_onchip_memory2_0_gen//mysystem_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'mysystem_onchip_memory2_0'
+Info: onchip_memory2_0: "mysystem" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: jtag_uart_0: Starting RTL generation for module 'mysystem_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=mysystem_jtag_uart_0 --dir=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0063_jtag_uart_0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0063_jtag_uart_0_gen//mysystem_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'mysystem_jtag_uart_0'
+Info: jtag_uart_0: "mysystem" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: hex5_hex0: Starting RTL generation for module 'mysystem_hex5_hex0'
+Info: hex5_hex0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mysystem_hex5_hex0 --dir=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0064_hex5_hex0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0064_hex5_hex0_gen//mysystem_hex5_hex0_component_configuration.pl  --do_build_sim=0  ]
+Info: hex5_hex0: Done RTL generation for module 'mysystem_hex5_hex0'
+Info: hex5_hex0: "mysystem" instantiated altera_avalon_pio "hex5_hex0"
+Info: pushbuttons: Starting RTL generation for module 'mysystem_pushbuttons'
+Info: pushbuttons:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mysystem_pushbuttons --dir=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0065_pushbuttons_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/Chris/AppData/Local/Temp/alt6452_7590257426149550163.dir/0065_pushbuttons_gen//mysystem_pushbuttons_component_configuration.pl  --do_build_sim=0  ]
+Info: pushbuttons: Done RTL generation for module 'mysystem_pushbuttons'
+Info: pushbuttons: "mysystem" instantiated altera_avalon_pio "pushbuttons"
+Info: reg32_avalon_interface_0: "mysystem" instantiated reg32_avalon_interface "reg32_avalon_interface_0"
+Info: hps_0: "Doing Pretransform for module: hps_0"
+Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve signal integrity
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: hps_0: "mysystem" instantiated altera_hps "hps_0"
+Info: pipeline_bridge_swap_transform: After transform: 45 modules, 149 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 45 modules, 149 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 45 modules, 149 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 45 modules, 149 connections
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 45 modules, 149 connections
+Info: mm_interconnect_0: "mysystem" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: pipeline_bridge_swap_transform: After transform: 20 modules, 57 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 20 modules, 57 connections
+Info: mm_interconnect_1: "mysystem" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_1"
+Info: irq_mapper: "mysystem" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_mapper_001: "mysystem" instantiated altera_irq_mapper "irq_mapper_001"
+Info: rst_controller: "mysystem" instantiated altera_reset_controller "rst_controller"
+Info: sys_pll: "sys_clock" instantiated altera_pll "sys_pll"
+Info: reset_from_locked: "sys_clock" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent"
+Info: jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "mm_interconnect_0" instantiated altera_merlin_router "addr_router"
+Info: id_router: "mm_interconnect_0" instantiated altera_merlin_router "id_router"
+Info: limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "limiter"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "burst_adapter"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: cmd_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: addr_router: "mm_interconnect_1" instantiated altera_merlin_router "addr_router"
+Info: id_router: "mm_interconnect_1" instantiated altera_merlin_router "id_router"
+Info: cmd_xbar_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_xbar_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: width_adapter: "mm_interconnect_1" instantiated altera_merlin_width_adapter "width_adapter"
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/Users/Chris/Desktop/32-Bit-Register/EEC181Lab2/mysystem/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: mysystem: Done "mysystem" with 37 modules, 87 files, 2142693 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

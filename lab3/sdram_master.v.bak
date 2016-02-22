@@ -1,0 +1,142 @@
+module sdram_master (
+input clk,
+input reset_n,
+input waitrequest,
+input readdatavalid,
+input [15:0] readdata,
+output reg read_n = 1,
+output reg write_n = 1,
+output reg chipselect,
+output reg [31:0] address =0,
+output reg [1:0] byteenable,
+output reg [15:0] writedata
+};
+
+reg arrayfull = 0;
+reg done_sort = 0;
+reg [15:0] stored_array [0:9];
+
+always @( posedge clock )    //synchronous reset signal  
+	begin
+		if(!resetn) begin                 
+			read_n <= 1;
+			write_n <= 1;
+			arrayfull <= 0;
+			done_sort <= 0;
+			stored_array <= 0;
+			end
+		else begin
+			if(arrayfull ==0)   //if array is not full with 10 elements
+				read_n <= 0;    //continue reading from slave  
+			else 
+				read_n <= 1;    //if array is full, turn off read request signal 
+		
+			if(done_sort ==0)   // if array soring is not done
+				write_n <= 1;   // turn off write request 
+			else 
+				write_n <= 0;   //if done sorting, turn write request on to write back results
+			end
+	end
+
+reg [3:0] index = 0;
+	
+always @ (readdata)	  //if new data is read 
+	begin
+		stored_array[index] =  readdata;  //store new data into array 
+		index++;		
+	end
+	
+
+always @(stored_array)  //when new data is stored in the array 
+	begin
+		if (stored_array[9] != 0) begin //check to see if we have all 10 numbers in the array
+			arrayfull = 1;  
+		else 
+			arrayfull = 0;
+	end
+
+	
+	
+///////////////////////////////////////////////////////////////////////////////////////////////
+//      USE BUBBLE SORT ALGORITHM TO SORT ARRAY IN DESCENDING ORDER
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+parameter n = 10;
+integer i, j;
+reg [15:0] swap;
+	
+always @ (arrayfull)
+	begin
+		if(arrrayfull ==1) 
+		begin
+			for (i = 0 ; i < ( n - 1 ); i++)
+				begin 
+					for (j = 0 ; j < n - i - 1; j++)
+					begin 
+						if (stored_array[j] > stored_array[j+1]) 
+							begin 
+							swap <= stored_array[j];
+							stored_array[j] <= stored_array[j+1];
+							stored_array[j+1] <= swap;
+						    end
+					end 			
+			    end
+		end  
+
+		if(i >= (n-1))	     //for-loop is done executed
+			done_sort = 1;  
+	end	
+		
+/////////////////////////////////////////////////////////////////////////////////////////////////	
+//THIS IS A SECOND WAY TO SORT THE ARRAY. 
+//WHAT DO YOU THINK, DUY? WHICH ONE IS BETTER?
+/////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ 
+reg [15:0] max = 0;
+reg [15:0] min =0;
+reg start_loop =0;
+integer k;	
+always @ (arrayfull)
+	begin
+		if(arrrayfull ==1) 
+		begin
+			if(stored_array[0] > stored_array[1]) begin
+				max <= stored_array[0];
+				min <= stored_array[1];
+				start_loop <= 1;
+				end
+			else begin
+				max <= stored_array[1];
+				min <= stored_array[0];
+				start_loop <= 1;
+				end
+				
+			if(start_loop ==1) begin
+				for (k=2; k<10;k= k+1)
+					begin 
+						 if (stored_array[k] > max) 
+							max = stored_array[k];
+						 else if (stored_array[k] < min)
+							min = storedarray[k];
+					end 
+				end
+				
+			if(k>= 10)  //for-loop is done executed 
+				sort_done = 1;
+		end
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+reg [15:0] minmax [0:1];
+assign maxmin = {max, min};  //or = {stored_array[9],stored_array[0]};
+integer m=0;
+always @(posedge clock)			
+	begin
+		if(sort_done ==1 & m<2) begin
+			m <= m+1;
+			address <= 0xC4000000 + m;
+			writedata <= maxmin[m-1];  
+			end
+	end
+	
+endmodule	
